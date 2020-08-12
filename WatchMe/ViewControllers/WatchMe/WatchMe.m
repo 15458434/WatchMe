@@ -21,6 +21,7 @@
         previewLayer.frame = layerFrame;
         [self.layer addSublayer:previewLayer];
         previewLayer.autoresizingMask = NSViewMinXMargin | NSViewMaxXMargin | NSViewWidthSizable | NSViewMinYMargin | NSViewMaxYMargin | NSViewHeightSizable;
+        previewLayer.transform = CATransform3DMakeScale(-1, 1, 1);
         _previewLayer = previewLayer;
     }
     return self;
@@ -37,6 +38,7 @@
         previewLayer.frame = layerFrame;
         [self.layer addSublayer:previewLayer];
         previewLayer.autoresizingMask = NSViewMinXMargin | NSViewMaxXMargin | NSViewWidthSizable | NSViewMinYMargin | NSViewMaxYMargin | NSViewHeightSizable;
+        previewLayer.transform = CATransform3DMakeScale(-1, 1, 1);
         _previewLayer = previewLayer;
     }
     return self;
@@ -53,6 +55,7 @@
         previewLayer.frame = layerFrame;
         [self.layer addSublayer:previewLayer];
         previewLayer.autoresizingMask = NSViewMinXMargin | NSViewMaxXMargin | NSViewWidthSizable | NSViewMinYMargin | NSViewMaxYMargin | NSViewHeightSizable;
+        previewLayer.transform = CATransform3DMakeScale(-1, 1, 1);
         _previewLayer = previewLayer;
     }
     return self;
