@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ViewController.h
 //  WatchMe
 //
 //  Created by Mark Cornelisse on 12/08/2020.
@@ -8,7 +8,7 @@
 
 @import Cocoa;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface ViewController : NSViewController
 
 
 @end

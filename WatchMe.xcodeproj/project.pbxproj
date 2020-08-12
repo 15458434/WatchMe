@@ -59,8 +59,7 @@
 			children = (
 				38C7306624E46ECE000BA551 /* AppDelegate.h */,
 				38C7306724E46ECE000BA551 /* AppDelegate.m */,
-				38C7306924E46ECE000BA551 /* ViewController.h */,
-				38C7306A24E46ECE000BA551 /* ViewController.m */,
+				38C7307A24E46F01000BA551 /* ViewControllers */,
 				38C7306C24E46ED2000BA551 /* Assets.xcassets */,
 				38C7306E24E46ED2000BA551 /* Main.storyboard */,
 				38C7307124E46ED2000BA551 /* Info.plist */,
@@ -68,6 +67,15 @@
 				38C7307424E46ED2000BA551 /* WatchMe.entitlements */,
 			);
 			path = WatchMe;
+			sourceTree = "<group>";
+		};
+		38C7307A24E46F01000BA551 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				38C7306924E46ECE000BA551 /* ViewController.h */,
+				38C7306A24E46ECE000BA551 /* ViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
