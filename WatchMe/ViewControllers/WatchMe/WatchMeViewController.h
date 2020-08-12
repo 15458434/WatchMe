@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WatchMeViewController.h
 //  WatchMe
 //
 //  Created by Mark Cornelisse on 12/08/2020.
@@ -8,7 +8,7 @@
 
 @import Cocoa;
 
-@interface ViewController : NSViewController
+@interface WatchMeViewController : NSViewController
 
 
 @end
