@@ -12,6 +12,8 @@
 		38C7306D24E46ED2000BA551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C7306C24E46ED2000BA551 /* Assets.xcassets */; };
 		38C7307024E46ED2000BA551 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C7306E24E46ED2000BA551 /* Main.storyboard */; };
 		38C7307324E46ED2000BA551 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C7307224E46ED2000BA551 /* main.m */; };
+		38C7307E24E46FB8000BA551 /* WatchMeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C7307D24E46FB8000BA551 /* WatchMeModel.m */; };
+		38C7308124E47060000BA551 /* WatchMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C7308024E47060000BA551 /* WatchMe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,10 @@
 		38C7307124E46ED2000BA551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38C7307224E46ED2000BA551 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38C7307424E46ED2000BA551 /* WatchMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchMe.entitlements; sourceTree = "<group>"; };
+		38C7307C24E46FB8000BA551 /* WatchMeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchMeModel.h; sourceTree = "<group>"; };
+		38C7307D24E46FB8000BA551 /* WatchMeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WatchMeModel.m; sourceTree = "<group>"; };
+		38C7307F24E47060000BA551 /* WatchMe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchMe.h; sourceTree = "<group>"; };
+		38C7308024E47060000BA551 /* WatchMe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WatchMe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,10 @@
 			children = (
 				38C7306924E46ECE000BA551 /* WatchMeViewController.h */,
 				38C7306A24E46ECE000BA551 /* WatchMeViewController.m */,
+				38C7307F24E47060000BA551 /* WatchMe.h */,
+				38C7308024E47060000BA551 /* WatchMe.m */,
+				38C7307C24E46FB8000BA551 /* WatchMeModel.h */,
+				38C7307D24E46FB8000BA551 /* WatchMeModel.m */,
 			);
 			path = WatchMe;
 			sourceTree = "<group>";
@@ -157,7 +167,9 @@
 			files = (
 				38C7306B24E46ECE000BA551 /* WatchMeViewController.m in Sources */,
 				38C7307324E46ED2000BA551 /* main.m in Sources */,
+				38C7308124E47060000BA551 /* WatchMe.m in Sources */,
 				38C7306824E46ECE000BA551 /* AppDelegate.m in Sources */,
+				38C7307E24E46FB8000BA551 /* WatchMeModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +310,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "-Wpartial-availability";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenhair.WatchMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -317,6 +331,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "-Wpartial-availability";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenhair.WatchMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
