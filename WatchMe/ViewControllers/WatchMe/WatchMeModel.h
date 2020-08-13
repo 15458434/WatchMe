@@ -6,14 +6,27 @@
 //  Copyright © 2020 Mark Cornelisse. All rights reserved.
 //
 
-@import Foundation;
+@import Cocoa;
 @import AVFoundation;
+
+@class WatchMeModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol WatchMeModelDelegate <NSObject>
+
+- (NSWindow *)requestWindowForWatchMeModel:(WatchMeModel *)model;
+- (AVCaptureVideoPreviewLayer *)previewLayerForWatchMeModel:(WatchMeModel *)model;
+
+@end
+
 @interface WatchMeModel : NSObject
 
+@property (nonatomic, weak) id<WatchMeModelDelegate> delegate;
 
+- (void)prepareForUse;
+- (void)start;
+- (void)stop;
 
 @end
 
