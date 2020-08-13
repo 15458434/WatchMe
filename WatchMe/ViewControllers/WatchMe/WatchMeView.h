@@ -1,5 +1,5 @@
 //
-//  WatchMe.h
+//  WatchMeView.h
 //  WatchMe
 //
 //  Created by Mark Cornelisse on 12/08/2020.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WatchMe : NSView
+@interface WatchMeView : NSView
 
 @property (nonatomic, weak) AVCaptureVideoPreviewLayer *previewLayer;
 

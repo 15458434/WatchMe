@@ -1,14 +1,14 @@
 //
-//  WatchMe.m
+//  WatchMeView.m
 //  WatchMe
 //
 //  Created by Mark Cornelisse on 12/08/2020.
 //  Copyright © 2020 Mark Cornelisse. All rights reserved.
 //
 
-#import "WatchMe.h"
+#import "WatchMeView.h"
 
-@implementation WatchMe
+@implementation WatchMeView
 
 #pragma mark - NSView
 

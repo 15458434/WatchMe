@@ -8,12 +8,12 @@
 
 @import AVFoundation;
 #import "WatchMeViewController.h"
-#import "WatchMe.h"
+#import "WatchMeView.h"
 #import "WatchMeModel.h"
 
 @interface WatchMeViewController ()
 
-@property (nonatomic, weak) IBOutlet WatchMe *previewView;
+@property (nonatomic, weak) IBOutlet WatchMeView *previewView;
 
 @property (nonatomic, strong) AVCaptureSession *captureSession;
 @property (nonatomic, strong) AVCaptureDevice *videoDevice;
