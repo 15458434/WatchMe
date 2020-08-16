@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3847D75024E8861100769227 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 3847D74F24E8861100769227 /* README */; };
 		38C7306824E46ECE000BA551 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C7306724E46ECE000BA551 /* AppDelegate.m */; };
 		38C7306B24E46ECE000BA551 /* WatchMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C7306A24E46ECE000BA551 /* WatchMeViewController.m */; };
 		38C7306D24E46ED2000BA551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C7306C24E46ED2000BA551 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3847D74F24E8861100769227 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		38C7306324E46ECE000BA551 /* WatchMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C7306624E46ECE000BA551 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38C7306724E46ECE000BA551 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 		38C7305A24E46ECE000BA551 = {
 			isa = PBXGroup;
 			children = (
+				3847D74F24E8861100769227 /* README */,
 				38C7306524E46ECE000BA551 /* WatchMe */,
 				38C7306424E46ECE000BA551 /* Products */,
 			);
@@ -153,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3847D75024E8861100769227 /* README in Resources */,
 				38C7306D24E46ED2000BA551 /* Assets.xcassets in Resources */,
 				38C7307024E46ED2000BA551 /* Main.storyboard in Resources */,
 			);
