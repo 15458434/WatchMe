@@ -10,21 +10,26 @@
 
 @implementation WatchMeView
 
+- (AVCaptureVideoPreviewLayer *)previewLayer {
+    return (AVCaptureVideoPreviewLayer *)self.layer;
+}
+
 #pragma mark - NSView
 
 - (instancetype)initWithFrame:(NSRect)frameRect {
     self = [super initWithFrame:frameRect];
     if (self) {
         self.wantsLayer = YES;
-        AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] init];
-        CGRect layerFrame = self.layer.bounds;
-        previewLayer.frame = layerFrame;
-        [self.layer addSublayer:previewLayer];
-        previewLayer.autoresizingMask = NSViewMinXMargin | NSViewMaxXMargin | NSViewWidthSizable | NSViewMinYMargin | NSViewMaxYMargin | NSViewHeightSizable;
-        previewLayer.transform = CATransform3DMakeScale(-1, 1, 1);
-        _previewLayer = previewLayer;
     }
     return self;
+}
+
+- (CALayer *)makeBackingLayer {
+    AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] init];
+    previewLayer.frame = self.bounds;
+    previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    previewLayer.transform = CATransform3DMakeScale(-1, 1, 1);
+    return previewLayer;
 }
 
 #pragma mark - NSCoding
@@ -33,13 +38,6 @@
     self = [super initWithCoder:coder];
     if (self) {
         self.wantsLayer = YES;
-        AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] init];
-        CGRect layerFrame = self.layer.bounds;
-        previewLayer.frame = layerFrame;
-        [self.layer addSublayer:previewLayer];
-        previewLayer.autoresizingMask = NSViewMinXMargin | NSViewMaxXMargin | NSViewWidthSizable | NSViewMinYMargin | NSViewMaxYMargin | NSViewHeightSizable;
-        previewLayer.transform = CATransform3DMakeScale(-1, 1, 1);
-        _previewLayer = previewLayer;
     }
     return self;
 }
@@ -50,13 +48,6 @@
     self = [super init];
     if (self) {
         self.wantsLayer = YES;
-        AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] init];
-        CGRect layerFrame = self.layer.bounds;
-        previewLayer.frame = layerFrame;
-        [self.layer addSublayer:previewLayer];
-        previewLayer.autoresizingMask = NSViewMinXMargin | NSViewMaxXMargin | NSViewWidthSizable | NSViewMinYMargin | NSViewMaxYMargin | NSViewHeightSizable;
-        previewLayer.transform = CATransform3DMakeScale(-1, 1, 1);
-        _previewLayer = previewLayer;
     }
     return self;
 }
