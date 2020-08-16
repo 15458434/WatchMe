@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<WatchMeModelDelegate> delegate;
 
+@property (nonatomic, readonly) BOOL isActive;
+
 - (void)prepareForUse;
 - (void)start;
 - (void)stop;

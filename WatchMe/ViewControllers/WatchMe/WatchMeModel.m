@@ -10,6 +10,8 @@
 
 @interface WatchMeModel ()
 
+@property (nonatomic) BOOL isActive;
+
 @property (nonatomic, strong) AVCaptureSession *captureSession;
 @property (nonatomic, strong) AVCaptureDevice *videoDevice;
 @property (nonatomic, strong) AVCaptureDeviceInput *videoDeviceInput;
@@ -55,10 +57,14 @@
             case AVAuthorizationStatusNotDetermined:
             {
                 // The app hasn't yet asked the user for camera access.
+                __weak typeof(self) weakSelf = self;
                 [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
-                    if (granted) {
-                        [self setupCaptureSession];
-                    }
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if (granted) {
+                            [weakSelf setupCaptureSession];
+                            [weakSelf startSession];
+                        }
+                    });
                 }];
                 break;
             }
@@ -78,12 +84,29 @@
     }
 }
 
+- (void)startSession {
+    if (self.isActive) {
+        [_captureSession startRunning];
+    }
+}
+
 - (void)start {
-    [_captureSession startRunning];
+    self.isActive = YES;
+    [self startSession];
 }
 
 - (void)stop {
     [_captureSession stopRunning];
+}
+
+#pragma mark - NSObject
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.isActive = NO;
+    }
+    return self;
 }
 
 @end
